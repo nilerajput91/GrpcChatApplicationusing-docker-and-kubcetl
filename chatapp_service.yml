@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: chat_app_service
+spec:
+  selector:
+    app: webservers
+  type: LoadBalancer
+  ports:
+    - name: chat_app
+      port: 8080
+      targetPort: 80
